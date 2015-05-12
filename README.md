@@ -1,0 +1,1 @@
+This is a game where you select the button that looks like the path you would like to follow. At some points in the game you will be asked to input certain charachters that corrospond to your choice. Please enjoy!
