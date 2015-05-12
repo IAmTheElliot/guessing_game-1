@@ -11,10 +11,11 @@ if (overlordChoice < 0.34) {
 }
 
 var compare = function(userChoice, overlordChoice) {
-	if(userChoice === overlordChoice); {
+	if(userChoice === overlordChoice) {
 	alert("Your skills matched the Overlord's. You're caught in an eternal struggle!");
 	
 		}
+
 if(userChoice === "1") {
 	if(overlordChoice === "3") {
 		alert("You've bested the Overlord with the axe!");
@@ -44,7 +45,7 @@ if(userChoice === "3") {
 };
 console.log("Your Choice: " + userChoice);
 console.log("Overlord Choice: " + overlordChoice);
-compare(userChoice, overlordChoice)
+compare(userChoice, overlordChoice);
 }
 var el = document.getElementById("choose");
 el.addEventListener("click", attack);
