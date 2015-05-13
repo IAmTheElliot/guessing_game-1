@@ -2,6 +2,7 @@
 var attack = function(){
 	var userChoice = prompt("Choose your weapon, now! 1. Axe 2. Bow & Arrow 3. Sword");
 	var overlordChoice = Math.random();
+
 	if (overlordChoice < 0.34) {
 		overlordChoice = "1";
 	} else if (overlordChoice <= 0.67) {
@@ -11,26 +12,28 @@ var attack = function(){
 	}
 
 	var compare = function(userChoice, overlordChoice) {
-			if(userChoice === overlordChoice) {
-			alert("Your skills matched the Overlord's. You're caught in an eternal struggle!");
-			}
+		if(userChoice === overlordChoice) {
+		alert("Your skills matched the Overlord's. You're caught in an eternal struggle!");
+		}
 
 		if(userChoice === "1") {
 			if(overlordChoice === "3") {
 				alert("You've bested the Overlord with the axe! You win!");
 			} else {
-				if(overlordChoice === "2")
+				if(overlordChoice === "2") {
 					alert("The Overlord has slain you with the bow & arrow!");
 				}
 			}
+		}
 
 		if(userChoice === "2") {
 			if(overlordChoice === "1") {
 				alert("Your arrow found the Overlord's face! You win!");
 			} else {
-				if(overlordChoice === "3")
+				if(overlordChoice === "3") {
 					alert("Your arrow missed its mark... The Overlord sliced you real good.");
 				}
+			}
 		}
 
 		if(userChoice === "3") {
