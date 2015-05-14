@@ -1,55 +1,40 @@
 /* This path to attack */
-var attack = function(){
-	var userChoice = prompt("Choose your weapon, now! 1. Axe 2. Bow & Arrow 3. Sword");
-	var overlordChoice = Math.random();
+function attack(){
+	var player1Wins = 0
+	var i = 0
+		do {
+			var player1Choice = prompt("Choose your weapon, now! 1. Axe 2. Bow & Arrow 3. Sword");
+			var overlordChoice = Math.random();
+			var message = ""
 
-	if (overlordChoice < 0.34) {
-		overlordChoice = "1";
-	} else if (overlordChoice <= 0.67) {
-		overlordChoice = "2";
-	} else {
-		overlordChoice = "3";
-	}
-
-	var compare = function(userChoice, overlordChoice) {
-		if(userChoice === overlordChoice) {
-		alert("Your skills matched the Overlord's. You're caught in an eternal struggle!");
-		}
-
-		if(userChoice === "1") {
-			if(overlordChoice === "3") {
-				alert("You've bested the Overlord with the axe! You win!");
+			if (overlordChoice < 0.34) {
+				overlordChoice = "1";
+			} else if (overlordChoice <= 0.67) {
+				overlordChoice = "2";
 			} else {
-				if(overlordChoice === "2") {
-					alert("The Overlord has slain you with the bow & arrow!");
-				}
+				overlordChoice = "3";
 			}
-		}
 
-		if(userChoice === "2") {
-			if(overlordChoice === "1") {
-				alert("Your arrow found the Overlord's face! You win!");
+console.log(overlordChoice);
+console.log(player1Choice);
+
+			if (player1Choice === overlordChoice){
+				message = "Your skills matched the Overlord's. You're caught in an eternal struggle!";
+			} else if (player1Choice === 3 && overlordChoice === 2) {
+				message = "You've cut the Overlord's bow string and his will to live. You win!";
+			} else if (player1Choice === 2 && overlordChoice ===1) {
+				message = "Your arrow found the Overlord's face! You win!";
+			} else if (player1Choice === 1 && overlordChoice === 3) {
+				message = "You've bested the Overlord with the axe! You win!";
+			} else if (overlordChoice === 3 && player1Choice === 2) {
+				message = "Your arrow missed its mark... The Overlord sliced you real good.";
+			} else if (overlordChoice === 2 && player1Choice === 1) {
+				message = "The Overlord has slain you with the bow & arrow!";
 			} else {
-				if(overlordChoice === "3") {
-					alert("Your arrow missed its mark... The Overlord sliced you real good.");
-				}
-			}
-		}
-
-		if(userChoice === "3") {
-			if(overlordChoice === "1") {
-				alert("The Overlords Axe is lodged in your cranium.");
-			} else {
-				if(overlordChoice === "2"); {
-					alert("You've cut the Overlord's bow string and his will to live. You win!");
-				}
-			}
-		}
-	};
-
-	console.log("Your Choice: " + userChoice);
-	console.log("Overlord Choice: " + overlordChoice);
-	compare(userChoice, overlordChoice);
+				message = "The Overlords Axe is lodged in your cranium.";}
+			alert(message)
+			i += 1;
+		} while (i < 10);
 }
 
 var el = document.getElementById("choose");
